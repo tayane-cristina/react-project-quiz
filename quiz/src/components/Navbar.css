@@ -1,0 +1,8 @@
+.navbar {
+    background-color: rgba(65, 172, 221, 0.795);
+    min-height: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
