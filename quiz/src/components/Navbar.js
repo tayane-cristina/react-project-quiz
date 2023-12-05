@@ -1,8 +1,14 @@
 import './Navbar.css'
 import {useState} from 'react';
 import { NavLink } from 'react-router-dom';
+import { useAuthenticator } from '../hooks/useAuthentication';
+import { useAuthValue } from '../context/AuthContext';
 
 const Navbar = ( ) => {
+
+  const {logout} = useAuthenticator()
+  const {user} = useAuthValue()
+
 
   return (
     <div className='navbar'>
@@ -12,10 +18,21 @@ const Navbar = ( ) => {
 
         <nav>
             <ul>
-                <NavLink to="/">Página inicial</NavLink>
-                <NavLink to="/about">Sobre</NavLink>
+              <NavLink to="/">Página inicial</NavLink>
+              <NavLink to="/about">Sobre</NavLink>
+              {!user && 
+              <>
                 <NavLink to="/register">Criar cadastro</NavLink>
                 <NavLink to="/signin">Entrar</NavLink>
+              </>
+              }
+              {user && 
+              <>
+                <NavLink to="/category">Categorias</NavLink>
+                <NavLink to="/createQuiz">Criar quiz</NavLink>
+                <button className='btn-navbar' onClick={logout}>Sair</button>
+              </>
+              }   
             </ul>
         </nav>
       

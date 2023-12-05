@@ -40,6 +40,16 @@ a {
   border-radius: 5px;
 }
 
+.btn-navbar{
+  text-decoration: none;
+  color: black;
+  border: 2px solid rgb(255, 255, 255);
+  width: 7rem;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
 a:hover {
   border: 2px solid rgb(5, 5, 5);
 }

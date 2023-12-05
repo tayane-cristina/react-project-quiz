@@ -3,7 +3,9 @@ import { db } from '../firebase/config';
 import {
     getAuth, 
     createUserWithEmailAndPassword,
-    updateProfile
+    updateProfile,
+    signOut,
+    signInWithEmailAndPassword,
 } from 'firebase/auth'
 
 import {useState, useEffect} from 'react';
@@ -22,6 +24,7 @@ export function useAuthenticator () {
         }
     };
 
+    //REGISTER
     const createUser = async(data) => {
         
         checkIfIsCancelled()
@@ -36,11 +39,36 @@ export function useAuthenticator () {
                 await updateProfile(user, {
                     displayName: data.displayName
                 })
+
+                return user;
             
         } catch (error) {
             console.log(error.message)
         }
     }
+
+    //LOGOUT
+    const logout = () => {
+        checkIfIsCancelled()
+        signOut(auth)
+    }
+
+    //LOGIN
+    const login = async(data) => {
+        checkIfIsCancelled()
+
+        try {
+            await signInWithEmailAndPassword(
+                auth,
+                data.email,
+                data.password
+            )
+            
+        } catch (error) {
+            console.log(error.message) 
+        }
+
+    } 
 
     useEffect(() => {
         return () => setCancelled(true)
@@ -48,7 +76,9 @@ export function useAuthenticator () {
 
     return {
         auth,
-        createUser
+        createUser,
+        logout,
+        login
     }
 };
 

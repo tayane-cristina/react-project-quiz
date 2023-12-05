@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import { Navigate } from 'react-router-dom';
 import { useAuthenticator } from '../../../hooks/useAuthentication';
 
 const Register = ( ) => {
@@ -25,10 +26,8 @@ const Register = ( ) => {
   if (password !== confirmPassword) {
     setError("As senhas precisam ser iguais")
   } else {
-    const res = await createUser(user)
-    console.log(res)
-    setSuccessMessage("Seu cadastro foi feito com sucesso!")
-    console.log(user)
+      await createUser(user)
+      setSuccessMessage("Seu cadastro foi feito com sucesso!")
   }
     
   }
