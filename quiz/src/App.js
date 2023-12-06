@@ -16,6 +16,7 @@ import CreateQuiz from './pages/categoriesPages/createQuiz/CreateQuiz';
 
 import { AuthProvider } from './context/AuthContext';
 import { useAuthenticator } from './hooks/useAuthentication';
+import Program from './pages/categoriesPages/category/categoryOptions/program/Program';
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
           <Route path='/signin' element={!user ? <SignIn /> : <Home />}></Route>
           <Route path='/category' element={!user ? <Register /> : <Category />}></Route>
           <Route path='/createQuiz' element={!user ? <Register /> : <CreateQuiz />}></Route>
+          <Route path='/program' element={!user ? <Register /> : <Program />}></Route>
         </Routes>
       </BrowserRouter>
       </AuthProvider>

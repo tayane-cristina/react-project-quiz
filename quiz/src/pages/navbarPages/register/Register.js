@@ -1,5 +1,4 @@
 import {useState} from 'react';
-import { Navigate } from 'react-router-dom';
 import { useAuthenticator } from '../../../hooks/useAuthentication';
 
 const Register = ( ) => {
