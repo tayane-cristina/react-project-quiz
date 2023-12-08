@@ -143,3 +143,24 @@ label span {
   margin-bottom: 10px;
   border-radius: 5px;
 }
+
+/*ESTILOS DAS PÀGINAS DE PERGUNTAS E RESPOSTAS*/
+.li-question-answer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  width: 60%;
+  height: 20%;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgb(26, 149, 219);
+}
+
+.answer-option {
+  padding: 15px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: start;
+}
