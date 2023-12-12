@@ -17,6 +17,7 @@ import CreateQuiz from './pages/categoriesPages/createQuiz/CreateQuiz';
 import { AuthProvider } from './context/AuthContext';
 import { useAuthenticator } from './hooks/useAuthentication';
 import Program from './pages/categoriesPages/category/categoryOptions/program/Program';
+import Entertainment from './pages/categoriesPages/category/categoryOptions/program/Entertainment';
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
           <Route path='/category' element={!user ? <Register /> : <Category />}></Route>
           <Route path='/createQuiz' element={!user ? <Register /> : <CreateQuiz />}></Route>
           <Route path='/program' element={!user ? <Register /> : <Program />}></Route>
+          <Route path='/entertainment' element={!user ? <Register /> : <Entertainment />}></Route>
         </Routes>
       </BrowserRouter>
       </AuthProvider>

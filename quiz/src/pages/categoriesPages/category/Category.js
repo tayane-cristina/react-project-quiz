@@ -10,7 +10,7 @@ const Category = ( ) => {
         <li><Link to="/program">Programação</Link></li>
         <li><Link to="">História</Link></li>
         <li><Link to="">Ciências</Link></li>
-        <li><Link to="">Entretenimento</Link></li>
+        <li><Link to="/entertainment">Entretenimento</Link></li>
         <li><Link to="">Arte</Link></li>
         <li><Link to="">Esportes</Link></li>
       </ul>
