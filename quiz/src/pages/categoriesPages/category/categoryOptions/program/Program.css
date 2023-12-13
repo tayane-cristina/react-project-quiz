@@ -1,0 +1,12 @@
+.answer-option-btn {
+    background-color: rgb(13, 121, 172);
+    color: white;
+    font-weight: bold;
+}
+
+.category-title {
+    background-image: url('https://www.digitow.com.br/wp-content/uploads/2021/01/cursos-de-programacao-para-iniciantes.jpg');
+    background-size: 50cm;
+    color: white;
+    height: 40%;
+}

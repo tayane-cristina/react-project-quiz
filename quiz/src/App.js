@@ -17,7 +17,7 @@ import CreateQuiz from './pages/categoriesPages/createQuiz/CreateQuiz';
 import { AuthProvider } from './context/AuthContext';
 import { useAuthenticator } from './hooks/useAuthentication';
 import Program from './pages/categoriesPages/category/categoryOptions/program/Program';
-import Entertainment from './pages/categoriesPages/category/categoryOptions/program/Entertainment';
+import Entertainment from './pages/categoriesPages/category/categoryOptions/entertainment/Entertainment';
 
 function App() {
 

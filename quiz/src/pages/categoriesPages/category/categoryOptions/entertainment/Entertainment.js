@@ -1,15 +1,13 @@
-// src/Quiz.js
 import React, { useState, useEffect } from 'react';
 import { Data } from '../../../../../data/Data';
-import './Program.css'
 
-const Program = () => {
+const Entertainment = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
   const [resultMessage, setResultMessage] = useState("")
 
-  const programQuestions = Data.filter(question => question.category === "program")
+  const entertainmentQuestions = Data.filter(question => question.category === "entertainment")
 
   const handleAnswerOptionClick = (isCorrect) => {
     if (isCorrect) {
@@ -17,7 +15,7 @@ const Program = () => {
     }
 
     const nextQuestion = currentQuestion + 1;
-    if (nextQuestion < programQuestions.length) {
+    if (nextQuestion < entertainmentQuestions.length) {
       setCurrentQuestion(nextQuestion);
     } else {
       setShowScore(true);
@@ -43,7 +41,7 @@ const Program = () => {
   }, [score])
 
   
-  console.log(programQuestions)
+  console.log(entertainmentQuestions)
   
 
   return (
@@ -53,19 +51,19 @@ const Program = () => {
       </div>
       {showScore ? (
         <div className='score-section'>
-          <p>Você acertou {score} de {programQuestions.length} perguntas!</p>
+          <p>Você acertou {score} de {entertainmentQuestions.length} perguntas!</p>
           <p>{resultMessage}</p>
         </div>
       ) : (
         <>
           <div className='question-section'>
             <div className='question-count'>
-              <span>Pergunta {currentQuestion + 1}</span>/{programQuestions.length}
+              <span>Pergunta {currentQuestion + 1}</span>/{entertainmentQuestions.length}
             </div>
-            <h3 className='question-text'>{programQuestions[currentQuestion].questionText}</h3>
+            <h3 className='question-text'>{entertainmentQuestions[currentQuestion].questionText}</h3>
           </div>
           <div className='answer-section'>
-            {programQuestions[currentQuestion].answerOptions.map((answerOption, index) => (
+            {entertainmentQuestions[currentQuestion].answerOptions.map((answerOption, index) => (
               <button className='answer-option-btn' key={index} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>
               {answerOption.answerText}
             </button>
@@ -76,4 +74,4 @@ const Program = () => {
     </div>
   );
 };
-export default Program;
+export default Entertainment;

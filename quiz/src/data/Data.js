@@ -1,6 +1,7 @@
 export const Data = [
     {
         questionText: 'Qual é a linguagem de programação mais utilizada para criar páginas web?',
+        category: "program",
         answerOptions: [
           { answerText: 'Python', isCorrect: false },
           { answerText: 'Java', isCorrect: false },
@@ -10,6 +11,7 @@ export const Data = [
       },
       {
         questionText: 'Qual é a finalidade da linguagem de programação Python?',
+        category: "program",
         answerOptions: [
           { answerText: ' Desenvolvimento web', isCorrect: false },
           { answerText: 'Análise de dados', isCorrect: false },
@@ -19,6 +21,7 @@ export const Data = [
       },
       {
         questionText: 'O que significa CSS em relação ao desenvolvimento web?',
+        category: "program",
         answerOptions: [
           { answerText: 'Content Style Sheet', isCorrect: false },
           { answerText: 'Cascading Style Sheet', isCorrect: true },
@@ -28,6 +31,7 @@ export const Data = [
       },
       {
         questionText: 'Qual é a diferença entre um compilador e um interpretador?',
+        category: "program",
         answerOptions: [
           { answerText: 'Um compilador traduz código-fonte para código de máquina, enquanto um interpretador executa o código linha por linha.', isCorrect: true },
           { answerText: 'Um compilador executa o código linha por linha, enquanto um interpretador traduz código-fonte para código de máquina.', isCorrect: false },
@@ -37,6 +41,7 @@ export const Data = [
       },
       {
         questionText: 'Qual dessas estruturas de dados utiliza o conceito "Last In, First Out" (LIFO)?',
+        category: "program",
         answerOptions: [
           { answerText: 'Fila (Queue)', isCorrect: false },
           { answerText: 'Pilha (Stack)', isCorrect: true },
@@ -47,6 +52,7 @@ export const Data = [
 
       {
         questionText: 'O que é a recursividade em programação?',
+        category: "program",
         answerOptions: [
           { answerText: 'Um loop que se repete indefinidamente', isCorrect: false },
           { answerText: 'Uma função que chama a si mesma', isCorrect: true },
@@ -57,6 +63,7 @@ export const Data = [
 
       {
         questionText: 'Qual é o objetivo principal da normalização em bancos de dados relacionais?',
+        category: "program",
         answerOptions: [
           { answerText: 'Reduzir a redundância de dados', isCorrect: true },
           { answerText: 'Aumentar a redundância de dados', isCorrect: false },
@@ -67,6 +74,7 @@ export const Data = [
 
       {
         questionText: 'O que é um paradigma de programação funcional?',
+        category: "program",
         answerOptions: [
           { answerText: 'Prioriza a modificação direta dos valores das variáveis', isCorrect: false },
           { answerText: 'Baseia-se em funções puras e imutabilidade de dados', isCorrect: true },
@@ -77,6 +85,7 @@ export const Data = [
 
       {
         questionText: 'Qual é a diferença entre um método GET e um método POST em HTTP?',
+        category: "program",
         answerOptions: [
           { answerText: 'GET envia dados de forma mais segura que o POST', isCorrect: false },
           { answerText: 'POST é mais rápido que o GET na transmissão de dados', isCorrect: false },
@@ -87,11 +96,22 @@ export const Data = [
 
       {
         questionText: 'O que é o conceito de "Big O" na análise de algoritmos?',
+        category: "program",
         answerOptions: [
           { answerText: 'Representa o número máximo de iterações em um algoritmo', isCorrect: false },
           { answerText: 'Indica o tempo de execução exato de um algoritmo', isCorrect: false },
           { answerText: 'Descreve a complexidade de tempo ou espaço de um algoritmo em termos do tamanho da entrada', isCorrect: true },
           { answerText: 'Refere-se ao número mínimo de operações em um algoritmo', isCorrect: false },
+        ],
+      },
+      {
+        questionText: '',
+        category: "entertainment",
+        answerOptions: [
+          { answerText: '', isCorrect: false },
+          { answerText: '', isCorrect: false },
+          { answerText: '', isCorrect: true },
+          { answerText: '', isCorrect: false },
         ],
       },
 ]; 

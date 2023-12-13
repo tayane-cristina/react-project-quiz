@@ -150,14 +150,18 @@ label span {
 }
 
 .question-section{
-  background-color: springgreen;
   font-size: 20px;
 
 }
 
-.question-count{
-  background-color: teal;
-
+.score-section{
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 60%;
+  margin: auto;
 }
 
 .question-text{
@@ -180,7 +184,6 @@ label span {
 }
 
 .answer-option-btn {
-  background-color: rgb(43, 97, 212);
   width: 50%;
   font-family: 'Poppins';
   border-radius: 10px;
@@ -189,12 +192,21 @@ label span {
   margin: auto;
   margin-top: 10px;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.answer-option-btn:hover {
+  background-color:  rgb(10, 86, 121);
+  transform: scale(1.1);
+
 }
 
 .category-title{
-  height: 15%;
+  height: 20%;
   margin-top: 0;
   border: 0;
+  background-color: blue;
+ 
 }
 
 .category-title h2 {
