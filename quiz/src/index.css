@@ -144,23 +144,62 @@ label span {
   border-radius: 5px;
 }
 
-/*ESTILOS DAS PÀGINAS DE PERGUNTAS E RESPOSTAS*/
-.li-question-answer {
-  display: flex;
-  flex-direction: column;
-  margin-top: 3rem;
-  width: 60%;
-  height: 20%;
-  padding: 30px;
-  border-radius: 10px;
-  background-color: rgb(26, 149, 219);
+/*MARCAÇÃO DE SCORE*/
+.quiz{
+  height: 100vh;
 }
 
-.answer-option {
-  padding: 15px;
-  margin: 10px;
-  border: none;
-  border-radius: 5px;
+.question-section{
+  background-color: springgreen;
   font-size: 20px;
-  text-align: start;
+
+}
+
+.question-count{
+  background-color: teal;
+
+}
+
+.question-text{
+  
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 60%;
+  font-size: 35px;
+
+}
+
+.answer-section{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 50%;
+
+
+}
+
+.answer-option-btn {
+  background-color: rgb(43, 97, 212);
+  width: 50%;
+  font-family: 'Poppins';
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 15px;
+  margin: auto;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.category-title{
+  height: 15%;
+  margin-top: 0;
+  border: 0;
+}
+
+.category-title h2 {
+  padding: 30px;
+  font-size:60px;
+  font-weight: bold;
+  text-transform: uppercase;
 }

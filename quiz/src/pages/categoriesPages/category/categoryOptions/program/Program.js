@@ -1,27 +1,6 @@
 // src/Quiz.js
 import React, { useState } from 'react';
-
-const questions = [
-  {
-    questionText: 'Qual é a capital do Brasil?',
-    answerOptions: [
-      { answerText: 'Rio de Janeiro', isCorrect: false },
-      { answerText: 'Brasília', isCorrect: true },
-      { answerText: 'São Paulo', isCorrect: false },
-      { answerText: 'Salvador', isCorrect: false },
-    ],
-  },
-  {
-    questionText: 'Quem escreveu "Dom Quixote"?',
-    answerOptions: [
-      { answerText: 'Miguel de Cervantes', isCorrect: true },
-      { answerText: 'William Shakespeare', isCorrect: false },
-      { answerText: 'Friedrich Nietzsche', isCorrect: false },
-      { answerText: 'Charles Dickens', isCorrect: false },
-    ],
-  },
-  // Adicione mais perguntas aqui, seguindo o mesmo formato
-];
+import { Data } from '../../../../../data/Data';
 
 const Program = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -34,7 +13,7 @@ const Program = () => {
     }
 
     const nextQuestion = currentQuestion + 1;
-    if (nextQuestion < questions.length) {
+    if (nextQuestion < Data.length) {
       setCurrentQuestion(nextQuestion);
     } else {
       setShowScore(true);
@@ -43,21 +22,24 @@ const Program = () => {
 
   return (
     <div className='quiz'>
+      <div className='category-title'>
+        <h2 className=''>Programação</h2>
+      </div>
       {showScore ? (
         <div className='score-section'>
-          <p>Você acertou {score} de {questions.length} perguntas!</p>
+          <p>Você acertou {score} de {Data.length} perguntas!</p>
         </div>
       ) : (
         <>
           <div className='question-section'>
             <div className='question-count'>
-              <span>Pergunta {currentQuestion + 1}</span>/{questions.length}
+              <span>Pergunta {currentQuestion + 1}</span>/{Data.length}
             </div>
-            <h2 className='question-text'>{questions[currentQuestion].questionText}</h2>
+            <h2 className='question-text'>{Data[currentQuestion].questionText}</h2>
           </div>
           <div className='answer-section'>
-            {questions[currentQuestion].answerOptions.map((answerOption, index) => (
-              <button key={index} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>
+            {Data[currentQuestion].answerOptions.map((answerOption, index) => (
+              <button className='answer-option-btn' key={index} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>
                 {answerOption.answerText}
               </button>
             ))}
