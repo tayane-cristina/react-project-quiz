@@ -48,9 +48,7 @@ const Program = () => {
 
   return (
     <div className='quiz'>
-      <div className='category-title'>
-        
-      </div>
+      <div className='category-title title-program'></div>
       {showScore ? (
         <div className='score-section'>
           <p>Você acertou {score} de {programQuestions.length} perguntas!</p>
@@ -66,7 +64,7 @@ const Program = () => {
           </div>
           <div className='answer-section'>
             {programQuestions[currentQuestion].answerOptions.map((answerOption, index) => (
-              <button className='answer-option-btn' key={index} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>
+              <button className='answer-option-btn program' key={index} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>
               {answerOption.answerText}
             </button>
             ))}

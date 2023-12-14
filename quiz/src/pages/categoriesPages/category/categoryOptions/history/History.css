@@ -1,0 +1,17 @@
+.history {
+    background-color: rgb(226, 186, 7);
+    color: white;
+    font-weight: bold;
+}
+
+.history:hover {
+    background-color: rgb(160, 145, 6);
+    transform: scale(1.1);
+}
+
+.title-history {
+    background-image: url('https://humanidades.com/wp-content/uploads/2017/05/Historia-portada-e1658932155344.jpg');
+    background-size: 50cm;
+    color: white;
+    height: 40%;
+}

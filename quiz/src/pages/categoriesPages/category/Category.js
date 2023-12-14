@@ -8,11 +8,11 @@ const Category = ( ) => {
 
       <ul>
         <li><Link to="/program">Programação</Link></li>
-        <li><Link to="">História</Link></li>
-        <li><Link to="">Ciências</Link></li>
+        <li><Link to="/history">História</Link></li>
+        <li><Link to="/science">Ciências</Link></li>
         <li><Link to="/entertainment">Entretenimento</Link></li>
-        <li><Link to="">Arte</Link></li>
-        <li><Link to="">Esportes</Link></li>
+        <li><Link to="/art">Arte</Link></li>
+        <li><Link to="/sport">Esportes</Link></li>
       </ul>
     </div>
   );

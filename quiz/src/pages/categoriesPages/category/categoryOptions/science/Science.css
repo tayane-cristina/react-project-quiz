@@ -1,0 +1,17 @@
+.science {
+    background-color: rgb(39, 116, 16);
+    color: white;
+    font-weight: bold;
+}
+
+.science:hover {
+    background-color: rgb(31, 90, 13);
+    transform: scale(1.1);
+}
+
+.title-science {
+    background-image: url('https://blog.imaginie.com.br/wp-content/uploads/2022/01/Ciencias-da-Natureza-e-suas-tecnologias.png');
+    background-size: 50cm;
+    color: white;
+    height: 40%;
+}

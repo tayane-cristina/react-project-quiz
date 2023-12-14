@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Data } from '../../../../../data/Data';
+import './Science.css'
 
 const Science = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -46,9 +47,7 @@ const Science = () => {
 
   return (
     <div className='quiz'>
-      <div className='category-title'>
-        
-      </div>
+      <div className='category-title title-science'></div>
       {showScore ? (
         <div className='score-section'>
           <p>Você acertou {score} de {scienceQuestions.length} perguntas!</p>
@@ -64,7 +63,7 @@ const Science = () => {
           </div>
           <div className='answer-section'>
             {scienceQuestions[currentQuestion].answerOptions.map((answerOption, index) => (
-              <button className='answer-option-btn' key={index} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>
+              <button className='answer-option-btn science' key={index} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>
               {answerOption.answerText}
             </button>
             ))}

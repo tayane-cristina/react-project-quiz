@@ -1,10 +1,15 @@
-.answer-option-btn {
-    background-color: rgb(13, 121, 172);
+.program {
+    background-color: rgb(9, 102, 223);
     color: white;
     font-weight: bold;
 }
 
-.category-title {
+.program:hover {
+    background-color: rgb(5, 85, 160);
+    transform: scale(1.1);
+}
+
+.title-program {
     background-image: url('https://www.digitow.com.br/wp-content/uploads/2021/01/cursos-de-programacao-para-iniciantes.jpg');
     background-size: 50cm;
     color: white;

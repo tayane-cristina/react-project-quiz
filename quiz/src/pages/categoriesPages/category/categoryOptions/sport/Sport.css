@@ -1,0 +1,17 @@
+.sport {
+    background-color: rgb(218, 84, 7);
+    color: white;
+    font-weight: bold;
+}
+
+.sport:hover {
+    background-color: rgb(165, 66, 9);
+    transform: scale(1.1);
+}
+
+.title-sport {
+    background-image: url('https://cdn.wizard.com.br/wp-content/uploads/2020/10/09181758/como-falar-sobre-esportes-em-espanhol.png');
+    background-size: cover;
+    color: white;
+    height: 40%;
+}

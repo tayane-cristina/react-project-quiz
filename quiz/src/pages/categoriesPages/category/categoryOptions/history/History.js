@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Data } from '../../../../../data/Data';
-
+import './History.css'
 
 const History = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -47,9 +47,7 @@ const History = () => {
 
   return (
     <div className='quiz'>
-      <div className='category-title'>
-        
-      </div>
+      <div className='category-title title-history'></div>
       {showScore ? (
         <div className='score-section'>
           <p>Você acertou {score} de {historyQuestions.length} perguntas!</p>
@@ -65,7 +63,7 @@ const History = () => {
           </div>
           <div className='answer-section'>
             {historyQuestions[currentQuestion].answerOptions.map((answerOption, index) => (
-              <button className='answer-option-btn' key={index} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>
+              <button className='answer-option-btn history' key={index} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>
               {answerOption.answerText}
             </button>
             ))}

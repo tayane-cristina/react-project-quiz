@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Data } from '../../../../../data/Data';
+import './Entertainment.css'
 
 const Entertainment = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -46,9 +47,7 @@ const Entertainment = () => {
 
   return (
     <div className='quiz'>
-      <div className='category-title'>
-        
-      </div>
+      <div className='category-title title-entertainment'></div>
       {showScore ? (
         <div className='score-section'>
           <p>Você acertou {score} de {entertainmentQuestions.length} perguntas!</p>
@@ -64,7 +63,7 @@ const Entertainment = () => {
           </div>
           <div className='answer-section'>
             {entertainmentQuestions[currentQuestion].answerOptions.map((answerOption, index) => (
-              <button className='answer-option-btn' key={index} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>
+              <button className='answer-option-btn entertainment' key={index} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>
               {answerOption.answerText}
             </button>
             ))}

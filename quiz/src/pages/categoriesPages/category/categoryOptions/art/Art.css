@@ -1,0 +1,17 @@
+.art {
+    background-color: rgb(187, 10, 10);
+    color: white;
+    font-weight: bold;
+}
+
+.art:hover {
+    background-color: rgb(126, 8, 8);
+    transform: scale(1.1);
+}
+
+.title-art {
+    background-image: url('https://static-cdn.myedools.com/org-113225%2Fschool-114343%2Fcca0552364eb2def67046b68ae9d9165%2F379capa.jpg');
+    background-size: contain;
+    color: white;
+    height: 40%;
+}

@@ -1,0 +1,17 @@
+.entertainment {
+    background-color: rgb(163, 9, 81);
+    color: white;
+    font-weight: bold;
+}
+
+.entertainment:hover {
+    background-color: rgb(133, 7, 66);
+    transform: scale(1.1);
+}
+
+.title-entertainment {
+    background-image: url('https://1.bp.blogspot.com/-SIqWv9znwdA/VeIQCJ36yJI/AAAAAAAAU7U/GHEYcc3oaSM/s1600/Screenshot-2014-05-14-09.39.56.png');
+    background-size: 20cm;
+    color: white;
+    height: 40%;
+}

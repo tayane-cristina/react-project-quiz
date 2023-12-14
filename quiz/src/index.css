@@ -193,12 +193,7 @@ label span {
   margin-top: 10px;
   cursor: pointer;
   transition: 0.3s;
-}
-
-.answer-option-btn:hover {
-  background-color:  rgb(10, 86, 121);
-  transform: scale(1.1);
-
+  border: 3px solid black;
 }
 
 .category-title{
