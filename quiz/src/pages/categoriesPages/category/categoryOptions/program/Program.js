@@ -1,5 +1,6 @@
 // src/Quiz.js
 import React, { useState, useEffect } from 'react';
+import Back from '../../../../../components/Back';
 import { Data } from '../../../../../data/Data';
 import './Program.css'
 
@@ -48,6 +49,7 @@ const Program = () => {
 
   return (
     <div className='quiz'>
+      <Back />
       <div className='category-title title-program'></div>
       {showScore ? (
         <div className='score-section'>

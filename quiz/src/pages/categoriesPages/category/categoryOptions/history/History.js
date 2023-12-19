@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Back from '../../../../../components/Back';
 import { Data } from '../../../../../data/Data';
 import './History.css'
 
@@ -47,6 +48,7 @@ const History = () => {
 
   return (
     <div className='quiz'>
+      <Back />
       <div className='category-title title-history'></div>
       {showScore ? (
         <div className='score-section'>

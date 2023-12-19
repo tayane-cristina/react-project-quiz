@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Back from '../../../../../components/Back';
 import { Data } from '../../../../../data/Data';
 import './Art.css'
 
@@ -47,6 +48,7 @@ const Art = () => {
 
   return (
     <div className='quiz'>
+      <Back />
       <div className='category-title title-art'></div>
       {showScore ? (
         <div className='score-section'>
