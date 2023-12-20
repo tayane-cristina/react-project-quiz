@@ -1,4 +1,7 @@
 .div-principal-home{
+    background-image:
+    linear-gradient(rgba(231, 16, 9, 0.5), rgba(255, 255, 0, 0.5)),
+    url(https://cdn.wizard.com.br/wp-content/uploads/2017/07/02165739/quiz-palavras-em-ingles-plural-1.jpg);
     width: 100%;
     height: 99vh;
     display: flex;

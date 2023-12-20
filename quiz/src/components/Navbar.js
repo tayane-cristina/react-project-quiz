@@ -9,28 +9,27 @@ const Navbar = ( ) => {
   const {logout} = useAuthenticator()
   const {user} = useAuthValue()
 
-
   return (
     <div className='navbar'>
-        <h1>Diverte Quiz</h1>
-        <p className='subtitle-p'>Hey, explorador de curiosidades! Está pronto para mergulhar no mundo dos quizzes mais épicos? Junte-se à diversão, 
-            desafie sua mente e descubra o que você realmente sabe (ou não)! Para participar bastar criar o seu cadastro e fazer o seu login.</p>
-
-        <nav>
-            <ul>
-              <NavLink to="/">Página inicial</NavLink>
-              <NavLink to="/about">Sobre</NavLink>
+      <div className='navbar-h1-tilte'>
+        <img className='navbar-logo' src='https://cdn-icons-png.flaticon.com/128/9364/9364002.png' alt='logo'></img>
+      </div>
+        
+        <nav className='navbar-nav'>
+            <ul className='navbar-ul-options-to-nav'>
+              <NavLink className="navlink-to-navbar" to="/">Página inicial</NavLink>
+              <NavLink className="navlink-to-navbar" to="/about">Sobre</NavLink>
               {!user && 
               <>
-                <NavLink to="/register">Criar cadastro</NavLink>
-                <NavLink to="/signin">Entrar</NavLink>
+                <NavLink className="navlink-to-navbar" to="/register">Criar cadastro</NavLink>
+                <NavLink className="navlink-to-navbar" to="/signin">Entrar</NavLink>
               </>
               }
               {user && 
               <>
-                <NavLink to="/category">Categorias</NavLink>
-                <NavLink to="/createQuiz">Criar quiz</NavLink>
-                <button className='btn-navbar' onClick={logout}>Sair</button>
+                <NavLink className="navlink-to-navbar" to="/category">Categorias</NavLink>
+                <NavLink className="navlink-to-navbar" to="/createQuiz">Criar quiz</NavLink>
+                <button className='btn-navbar' onClick={logout}><img className='logo-out' src='https://cdn-icons-png.flaticon.com/128/126/126467.png' alt='logo-sair'></img></button>
               </>
               }   
             </ul>
