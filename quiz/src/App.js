@@ -24,6 +24,7 @@ import Sport from './pages/categoriesPages/category/categoryOptions/sport/Sport'
 
 import { AuthProvider } from './context/AuthContext';
 import { useAuthenticator } from './hooks/useAuthentication';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -42,13 +43,13 @@ function App() {
     <div className="App">
       <AuthProvider value={{user}}>
       <BrowserRouter>
+      <Navbar />
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/about' element={<About />}></Route>
           <Route path='/register' element={!user ? <Register /> : <Home />}></Route>
           <Route path='/signin' element={!user ? <SignIn /> : <Home />}></Route>
           <Route path='/category' element={!user ? <Register /> : <Category />}></Route>
-          <Route path='/createQuiz' element={!user ? <Register /> : <CreateQuiz />}></Route>
           <Route path='/program' element={!user ? <Register /> : <Program />}></Route>
 
           {/*ROUTES TO CATEGORY OPTIONS*/}
@@ -58,6 +59,7 @@ function App() {
           <Route path='/history' element={!user ? <Register /> : <History />}></Route>
           <Route path='/science' element={!user ? <Register /> : <Science />}></Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
       </AuthProvider>
     </div>

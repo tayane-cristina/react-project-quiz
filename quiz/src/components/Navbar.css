@@ -1,10 +1,11 @@
 .navbar {
-    background-color: whitesmoke;
+    background-color: rgb(160, 4, 4);
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     max-height: 20%;
+    color: white;
 }
 
 .navbar-nav{
@@ -28,11 +29,8 @@
 
 .navbar-h1-tilte{
     width: 20%;
+    height: 100%;
     padding: 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
 }
 
 .navbar-logo{
@@ -42,29 +40,12 @@
 }
 
 .navlink-to-navbar{
+    list-style: none;
     text-decoration: none;
-    font-size: 35px;
-    transition: 1s;
-    color: black;
+    color: white;
 }
 
-.navlink-to-navbar:hover{
-    position: relative;
-    
-}
-
-.navlink-to-navbar::before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    left: 0;
-    height: 5px;
-    border-radius: 2px;
-    background: linear-gradient(111.3deg, #f8d50f 9.6%, #ee3a04 93.6%);
-  }
-
-  .btn-navbar{
+.btn-navbar{
     width: auto;
     height: auto;
     border: none;
@@ -72,15 +53,15 @@
     border: 3px solid whitesmoke;
     border-radius: 10px;
     transition: 0.3s;
-  }
+}
 
-  .btn-navbar:hover {
+.btn-navbar:hover {
     border: 3px solid black;
 
-  }
+}
 
-  .logo-out {
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-  }
+.logo-out {
+   width: 50px;
+   height: 50px;
+   padding: 10px;
+}

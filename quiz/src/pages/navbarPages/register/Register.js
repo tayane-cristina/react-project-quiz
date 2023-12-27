@@ -9,7 +9,7 @@ const Register = ( ) => {
   const [confirmPassword, setConfirmPassword] = useState("")
 
   const [error, setError] = useState(false)
-  const [successMessage, setSuccessMessage] = useState("")
+  const [successMessage, setSuccessMessage] = useState(null)
 
   const {createUser} = useAuthenticator()
 
@@ -24,9 +24,12 @@ const Register = ( ) => {
   
   if (password !== confirmPassword) {
     setError("As senhas precisam ser iguais")
+    setSuccessMessage(null)
   } else {
       await createUser(user)
       setSuccessMessage("Seu cadastro foi feito com sucesso!")
+      setError(null)
+      
   }
     
   }
@@ -35,7 +38,7 @@ const Register = ( ) => {
     <div>
       <h1>Criar Cadastro</h1>
       {!error && <p className='subtitle-p'>Crie seu cadastro e teste seus conhecimentos!</p>}
-      {error && <p className='error-message'>As senhas devem ser iguais, e conter mais de 6 caracteres</p>}
+      {/*{error && <p className='error-message'>As senhas devem ser iguais, e conter mais de 6 caracteres</p>}*/}
 
       <form onSubmit={handleSubmit}>
         <label>
@@ -82,7 +85,8 @@ const Register = ( ) => {
         </label>
 
         <button className='btn-primary'>Enviar</button>
-        {!error && <p className='success-message'>{successMessage}</p>}
+        {error && <p>{error}</p>}
+        {successMessage && <p className='success-message'>{successMessage}</p>}
         
       </form>
     </div>
