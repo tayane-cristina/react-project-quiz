@@ -12,7 +12,6 @@ import About from './pages/navbarPages/about/About';
 import Register from './pages/navbarPages/register/Register';
 import SignIn from './pages/navbarPages/signin/SignIn';
 import Category from './pages/categoriesPages/category/Category';
-import CreateQuiz from './pages/categoriesPages/createQuiz/CreateQuiz';
 
 //PAGES OF THE CATEGORY OPTIONS
 import Art from './pages/categoriesPages/category/categoryOptions/art/Art'
@@ -28,9 +27,10 @@ import Footer from './components/Footer';
 
 
 function App() {
-
   const [user, setUser] = useState(undefined)
   const {auth} = useAuthenticator()
+
+  const loadingUser = user === undefined;
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -38,6 +38,10 @@ function App() {
       console.log(user)
     })
   }, [auth]);
+
+  if (loadingUser) {
+    return <p>Carregando...</p>
+  }
 
   return (
     <div className="App">
