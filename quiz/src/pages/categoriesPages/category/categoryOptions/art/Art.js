@@ -10,19 +10,44 @@ const Art = () => {
   const [resultMessage, setResultMessage] = useState("")
 
   const artQuestions = Data.filter(question => question.category === "art")
+  const buttons = document.querySelectorAll('.answer-option-btn')
 
-  const handleAnswerOptionClick = (isCorrect) => {
+  const btnOptionsInitialState = () => {
+    const btnOne = buttons[0]
+    const btnTwo = buttons[1]
+    const btnThree = buttons[2]
+    const btnFour = buttons[3]
+    
+    btnOne.style.backgroundColor = 'blue'
+    btnTwo.style.backgroundColor = 'blue'
+    btnThree.style.backgroundColor = 'blue'
+    btnFour.style.backgroundColor = 'blue'
+  }
+
+  const handleAnswerOptionClick = (e, isCorrect) => {
+    const optionTarget = e.target
+
     if (isCorrect) {
+      optionTarget.style.backgroundColor = 'green'
       setScore(score + 1);
+    } else {
+      optionTarget.style.backgroundColor = 'red'
     }
+    setTimeout(callNextQuestion, 1000)
+  };
 
+  const callNextQuestion = () => {
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < artQuestions.length) {
       setCurrentQuestion(nextQuestion);
     } else {
       setShowScore(true);
+      <button className='.btn-sucess'>Tentar Novamente</button>
     }
   };
+
+    
+  
 
   
   useEffect(() => {
@@ -65,7 +90,7 @@ const Art = () => {
           </div>
           <div className='answer-section'>
             {artQuestions[currentQuestion].answerOptions.map((answerOption, index) => (
-              <button className='answer-option-btn art' key={index} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>
+              <button className='answer-option-btn art' key={index} onClick={(e) => handleAnswerOptionClick(e, answerOption.isCorrect)}>
               {answerOption.answerText}
             </button>
             ))}
