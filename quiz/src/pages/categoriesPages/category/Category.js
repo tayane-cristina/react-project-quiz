@@ -11,7 +11,6 @@ const Category = ( ) => {
       </div> 
 
       <ul className='ul-options-category'>
-
         <li className='option-categorie option-program'>
           <img className='icon-category' src='https://img.icons8.com/?size=50&id=39210&format=png' alt='img-computer'></img>
           <Link className='a-category-option' to="/program">Programação</Link>
@@ -41,7 +40,6 @@ const Category = ( ) => {
           <img className='icon-category' src='https://img.icons8.com/?size=50&id=9820&format=png' alt='img-ball'></img>
           <Link className='a-category-option' to="/sport">Esportes</Link>
         </li>
-
       </ul>
     </div>
   );

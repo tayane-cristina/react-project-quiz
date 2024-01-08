@@ -36,10 +36,10 @@ const Footer = () => {
             <section>
                 <ul className='aux-links'>
                     <p><strong>Sites utilizados</strong></p>
-                    <li><a href="https://icons8.com.br" target="blank" rel="icons">Icons</a>Icons</li>
-                    <li><a href="https://www.pexels.com/" target="blank" rel="pexels">Pexels</a></li>
-                    <li><a href="https://firebase.com" target="blank" rel="firebase">Firebase</a></li>
-                    <li><a href="https://br.freepik.com/" target="blank" rel="frepick">FrePick</a></li>
+                    <li><a href="https://icons8.com.br" target="blank" rel="icons" className='hidden-link'>Icons</a>Icons</li>
+                    <li><a href="https://www.pexels.com/" target="blank" rel="pexels" className='hidden-link'>Pexels</a></li>
+                    <li><a href="https://firebase.com" target="blank" rel="firebase" className='hidden-link'>Firebase</a></li>
+                    <li><a href="https://br.freepik.com/" target="blank" rel="frepick" className='hidden-link'>FrePick</a></li>
                 </ul>
             </section>
         </div>

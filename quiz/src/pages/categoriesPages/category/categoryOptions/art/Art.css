@@ -1,7 +1,12 @@
+.div-principal-art {
+    margin-bottom: 5rem;
+}
+
 .art {
     background-color: rgb(187, 10, 10);
     color: white;
     font-weight: bold;
+    margin: 25px;
 }
 
 .art:hover {
@@ -13,5 +18,18 @@
     background-image: url('https://static-cdn.myedools.com/org-113225%2Fschool-114343%2Fcca0552364eb2def67046b68ae9d9165%2F379capa.jpg');
     background-size: contain;
     color: white;
-    height: 40%;
+    height: 20rem;
+}
+
+.answer-section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.answer-option-btn {
+    width: 40%;
+    height: auto;
 }

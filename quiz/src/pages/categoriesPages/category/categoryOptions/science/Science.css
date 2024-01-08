@@ -1,7 +1,12 @@
+.div-principal-science {
+    margin-bottom: 5rem;
+}
+
 .science {
     background-color: rgb(39, 116, 16);
     color: white;
     font-weight: bold;
+    margin: 25px;
 }
 
 .science:hover {
@@ -13,5 +18,18 @@
     background-image: url('https://blog.imaginie.com.br/wp-content/uploads/2022/01/Ciencias-da-Natureza-e-suas-tecnologias.png');
     background-size: 50cm;
     color: white;
-    height: 40%;
+    height: 20rem;
+}
+
+.answer-section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.answer-option-btn {
+    width: 40%;
+    height: auto;
 }

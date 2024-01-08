@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Back from '../../../../../components/Back';
 import { Data } from '../../../../../data/Data';
 import './Art.css'
 
@@ -9,8 +8,8 @@ const Art = () => {
   const [score, setScore] = useState(0);
   const [resultMessage, setResultMessage] = useState("")
 
-  const artQuestions = Data.filter(question => question.category === "art")
-  const buttons = document.querySelectorAll('.answer-option-btn')
+  const artQuestions = Data.filter(question => question.category === "art");
+  const buttons = document.querySelectorAll('.answer-option-btn');
 
   const btnOptionsInitialState = () => {
     const btnOne = buttons[0]
@@ -18,20 +17,22 @@ const Art = () => {
     const btnThree = buttons[2]
     const btnFour = buttons[3]
     
-    btnOne.style.backgroundColor = 'blue'
-    btnTwo.style.backgroundColor = 'blue'
-    btnThree.style.backgroundColor = 'blue'
-    btnFour.style.backgroundColor = 'blue'
+    btnOne.style.backgroundColor = 'rgb(187, 10, 10)'
+    btnTwo.style.backgroundColor = 'rgb(187, 10, 10)'
+    btnThree.style.backgroundColor = 'rgb(187, 10, 10)'
+    btnFour.style.backgroundColor = 'rgb(187, 10, 10)'
   }
 
   const handleAnswerOptionClick = (e, isCorrect) => {
+
     const optionTarget = e.target
 
+    buttons.disabled = true
     if (isCorrect) {
-      optionTarget.style.backgroundColor = 'green'
+      optionTarget.style.backgroundColor = "green"
       setScore(score + 1);
     } else {
-      optionTarget.style.backgroundColor = 'red'
+      optionTarget.style.backgroundColor = "red"
     }
     setTimeout(callNextQuestion, 1000)
   };
@@ -39,16 +40,12 @@ const Art = () => {
   const callNextQuestion = () => {
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < artQuestions.length) {
+      btnOptionsInitialState()
       setCurrentQuestion(nextQuestion);
     } else {
       setShowScore(true);
-      <button className='.btn-sucess'>Tentar Novamente</button>
     }
   };
-
-    
-  
-
   
   useEffect(() => {
     const updateScore = score
@@ -67,13 +64,8 @@ const Art = () => {
     }
   }, [score])
 
-  
-  console.log(artQuestions)
-  
-
   return (
-    <div className='quiz'>
-      <Back />
+    <div className='div-principal-art'>
       <div className='category-title title-art'></div>
       {showScore ? (
         <div className='score-section'>

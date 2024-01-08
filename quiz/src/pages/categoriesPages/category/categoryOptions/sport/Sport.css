@@ -1,7 +1,12 @@
+.div-principal-sport{
+    margin-bottom: 5rem;
+}
+
 .sport {
     background-color: rgb(218, 84, 7);
     color: white;
     font-weight: bold;
+    margin: 25px;
 }
 
 .sport:hover {
@@ -13,5 +18,18 @@
     background-image: url('https://cdn.wizard.com.br/wp-content/uploads/2020/10/09181758/como-falar-sobre-esportes-em-espanhol.png');
     background-size: cover;
     color: white;
-    height: 40%;
+    height: 20rem;
+}
+
+.answer-section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.answer-option-btn {
+    width: 40%;
+    height: auto;
 }

@@ -1,7 +1,12 @@
+.div-principal-entertainment{
+    margin-bottom: 5rem;
+}
+
 .entertainment {
     background-color: rgb(163, 9, 81);
     color: white;
     font-weight: bold;
+    margin: 25px;
 }
 
 .entertainment:hover {
@@ -13,5 +18,18 @@
     background-image: url('https://1.bp.blogspot.com/-SIqWv9znwdA/VeIQCJ36yJI/AAAAAAAAU7U/GHEYcc3oaSM/s1600/Screenshot-2014-05-14-09.39.56.png');
     background-size: 20cm;
     color: white;
-    height: 40%;
+    height: 20rem;
+}
+
+.answer-section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.answer-option-btn {
+    width: 40%;
+    height: auto;
 }

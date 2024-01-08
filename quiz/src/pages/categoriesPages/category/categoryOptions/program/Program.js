@@ -1,6 +1,5 @@
 // src/Quiz.js
 import React, { useState, useEffect } from 'react';
-import Back from '../../../../../components/Back';
 import { Data } from '../../../../../data/Data';
 import './Program.css'
 
@@ -11,19 +10,18 @@ const Program = () => {
   const [resultMessage, setResultMessage] = useState("")
 
   const programQuestions = Data.filter(question => question.category === "program")
-
-  const buttons = document.querySelectorAll('.answer-option-btn')
-
+  const buttons = document.querySelectorAll('.answer-option-btn');
+  
   const btnOptionsInitialState = () => {
     const btnOne = buttons[0]
     const btnTwo = buttons[1]
     const btnThree = buttons[2]
     const btnFour = buttons[3]
     
-    btnOne.style.backgroundColor = 'blue'
-    btnTwo.style.backgroundColor = 'blue'
-    btnThree.style.backgroundColor = 'blue'
-    btnFour.style.backgroundColor = 'blue'
+    btnOne.style.backgroundColor = 'rgb(9, 102, 223)'
+    btnTwo.style.backgroundColor = 'rgb(9, 102, 223)'
+    btnThree.style.backgroundColor = 'rgb(9, 102, 223)'
+    btnFour.style.backgroundColor = 'rgb(9, 102, 223)'
   }
 
   const handleAnswerOptionClick = (e, isCorrect) => {
@@ -64,8 +62,7 @@ const Program = () => {
   }, [score])
 
   return (
-    <div className='quiz'>
-      <Back />
+    <div className='div-principal-program'>
       <div className='category-title title-program'></div>
       {showScore ? (
         <div className='score-section'>

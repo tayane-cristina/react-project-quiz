@@ -1,7 +1,12 @@
+.quiz{
+    margin-bottom: 8rem;
+}
+
 .history {
     background-color: rgb(226, 186, 7);
     color: white;
     font-weight: bold;
+    margin: 25px;
 }
 
 .history:hover {
@@ -13,5 +18,18 @@
     background-image: url('https://humanidades.com/wp-content/uploads/2017/05/Historia-portada-e1658932155344.jpg');
     background-size: 50cm;
     color: white;
-    height: 40%;
+    height: 20rem;
+}
+
+.answer-section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.answer-option-btn {
+    width: 40%;
+    height: auto;
 }

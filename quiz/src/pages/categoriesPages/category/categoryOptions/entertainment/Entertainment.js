@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Back from '../../../../../components/Back';
 import { Data } from '../../../../../data/Data';
 import './Entertainment.css'
 
@@ -10,21 +9,44 @@ const Entertainment = () => {
   const [resultMessage, setResultMessage] = useState("")
 
   const entertainmentQuestions = Data.filter(question => question.category === "entertainment")
+  const buttons = document.querySelectorAll('.answer-option-btn');
 
-  const handleAnswerOptionClick = (isCorrect) => {
+  const btnOptionsInitialState = () => {
+    const btnOne = buttons[0]
+    const btnTwo = buttons[1]
+    const btnThree = buttons[2]
+    const btnFour = buttons[3]
+    
+    btnOne.style.backgroundColor = 'rgb(163, 9, 81)'
+    btnTwo.style.backgroundColor = 'rgb(163, 9, 81)'
+    btnThree.style.backgroundColor = 'rgb(163, 9, 81)'
+    btnFour.style.backgroundColor = 'rgb(163, 9, 81)'
+  }
+
+  const handleAnswerOptionClick = (e, isCorrect) => {
+
+    const optionTarget = e.target
+
+    buttons.disabled = true
     if (isCorrect) {
+      optionTarget.style.backgroundColor = "green"
       setScore(score + 1);
+    } else {
+      optionTarget.style.backgroundColor = "red"
     }
+    setTimeout(callNextQuestion, 1000)
+  };
 
+  const callNextQuestion = () => {
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < entertainmentQuestions.length) {
+      btnOptionsInitialState()
       setCurrentQuestion(nextQuestion);
     } else {
       setShowScore(true);
     }
   };
 
-  
   useEffect(() => {
     const updateScore = score
     if (updateScore <= 3) {
@@ -42,13 +64,8 @@ const Entertainment = () => {
     }
   }, [score])
 
-  
-  console.log(entertainmentQuestions)
-  
-
   return (
-    <div className='quiz'>
-      <Back />
+    <div className='div-principal-entertainment'>
       <div className='category-title title-entertainment'></div>
       {showScore ? (
         <div className='score-section'>
@@ -65,7 +82,7 @@ const Entertainment = () => {
           </div>
           <div className='answer-section'>
             {entertainmentQuestions[currentQuestion].answerOptions.map((answerOption, index) => (
-              <button className='answer-option-btn entertainment' key={index} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>
+              <button className='answer-option-btn entertainment' key={index} onClick={(e) => handleAnswerOptionClick(e, answerOption.isCorrect)}>
               {answerOption.answerText}
             </button>
             ))}

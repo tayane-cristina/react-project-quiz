@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Back from '../../../../../components/Back';
 import { Data } from '../../../../../data/Data';
 import './Sport.css'
 
@@ -9,21 +8,44 @@ const Sport = () => {
   const [score, setScore] = useState(0);
   const [resultMessage, setResultMessage] = useState("")
 
-  const sportQuestions = Data.filter(question => question.category === "sport")
+  const sportQuestions = Data.filter(question => question.category === "sport");
+  const buttons = document.querySelectorAll('.answer-option-btn');
 
-  const handleAnswerOptionClick = (isCorrect) => {
+  const btnOptionsInitialState = () => {
+    const btnOne = buttons[0]
+    const btnTwo = buttons[1]
+    const btnThree = buttons[2]
+    const btnFour = buttons[3]
+    
+    btnOne.style.backgroundColor = 'rgb(218, 84, 7)'
+    btnTwo.style.backgroundColor = 'rgb(218, 84, 7)'
+    btnThree.style.backgroundColor = 'rgb(218, 84, 7)'
+    btnFour.style.backgroundColor = 'rgb(218, 84, 7)'
+  }
+
+  const handleAnswerOptionClick = (e, isCorrect) => {
+
+    const optionTarget = e.target
+
+    buttons.disabled = true
     if (isCorrect) {
+      optionTarget.style.backgroundColor = "green"
       setScore(score + 1);
+    } else {
+      optionTarget.style.backgroundColor = "red"
     }
+    setTimeout(callNextQuestion, 1000)
+  };
 
+  const callNextQuestion = () => {
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < sportQuestions.length) {
+      btnOptionsInitialState()
       setCurrentQuestion(nextQuestion);
     } else {
       setShowScore(true);
     }
   };
-
   
   useEffect(() => {
     const updateScore = score
@@ -47,8 +69,7 @@ const Sport = () => {
   
 
   return (
-    <div className='quiz'>
-      <Back />
+    <div className='div-principal-sport'>
       <div className='category-title title-sport'></div>
       {showScore ? (
         <div className='score-section'>
@@ -65,7 +86,7 @@ const Sport = () => {
           </div>
           <div className='answer-section'>
             {sportQuestions[currentQuestion].answerOptions.map((answerOption, index) => (
-              <button className='answer-option-btn sport' key={index} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>
+              <button className='answer-option-btn sport' key={index} onClick={(e) => handleAnswerOptionClick(e, answerOption.isCorrect)}>
               {answerOption.answerText}
             </button>
             ))}

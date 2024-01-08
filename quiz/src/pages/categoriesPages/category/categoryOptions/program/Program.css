@@ -1,7 +1,12 @@
+.div-principal-program{
+    margin-bottom: 5rem;
+}
+
 .program {
     background-color: rgb(9, 102, 223);
     color: white;
     font-weight: bold;
+    margin: 25px;
 }
 
 .program:hover {
@@ -13,5 +18,18 @@
     background-image: url('https://www.digitow.com.br/wp-content/uploads/2021/01/cursos-de-programacao-para-iniciantes.jpg');
     background-size: 50cm;
     color: white;
-    height: 40%;
+    height: 20rem;
+}
+
+.answer-section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.answer-option-btn {
+    width: 40%;
+    height: auto;
 }

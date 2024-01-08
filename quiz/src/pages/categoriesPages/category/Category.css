@@ -3,8 +3,8 @@
 }
 
 .ul-options-category{
-    width: auto;
-    height: 100vh;
+    width: 100vw;
+    height: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -27,7 +27,7 @@
 } 
 
 .div-categories{
-    background-color: rgba(235, 232, 232, 0.514);
+    background-color: white;
 }
 
 li {
@@ -49,7 +49,6 @@ li {
     padding: 20px;
     background-color: white;
 }
-
 
 /*STULE CATEGORIES OPTIONS*/
 .option-program{
