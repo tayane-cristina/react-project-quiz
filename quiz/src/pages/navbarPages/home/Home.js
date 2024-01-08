@@ -12,7 +12,7 @@ const Home = ( ) => {
           a categoria de sua preferência e se divirta!
        </p>
       </div>  
-      <Link className='link' to="/category">Começar</Link>
+      <Link className='link-button-start' to="/category">Iniciar</Link>
     </div>
   );
 }

@@ -216,3 +216,18 @@ label span {
   text-decoration: underline rgb(120, 9, 224);
 }
 
+.hidden-link {
+  text-decoration: none;
+  color: black;
+}
+
+.special-word {
+  font-weight: bold;
+}
+
+.text {
+  width: 60%;
+  margin: auto;
+  font-size: 2em;
+}
+

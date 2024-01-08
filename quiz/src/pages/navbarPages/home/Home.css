@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
+
 .div-principal-home{
+    font-family: 'Sniglet', system-ui;
     width: 100%;
     height: auto;
     display: flex;
@@ -17,12 +20,12 @@
     margin-top: 5rem;
 }
 
-.link {
-    margin-top: 3rem;
+.link-button-start {
+    margin-top: 2rem;
     width: 300px;
     height: auto;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 70% 40%;
     border: 3px solid   rgb(160, 4, 4);;
     color: black;
     font-size: 40px;
@@ -30,7 +33,7 @@
     transition: 0.3s;
 }
 
-.link:hover {
+.link-button-start:hover {
     background-color:  rgb(160, 4, 4);;
     color: white;
 }

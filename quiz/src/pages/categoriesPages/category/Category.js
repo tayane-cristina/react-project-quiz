@@ -1,17 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import Back from '../../../components/Back';
 import './Category.css'
 
 const Category = ( ) => {
   return (
     <div className='div-categories'>
       <div className='page-category-header'>
-        <Back />
         <h1>Categorias</h1>
         <p>Escolha a categoria de sua preferência</p>
-      </div>
-      
+      </div> 
 
       <ul className='ul-options-category'>
 
@@ -49,5 +46,4 @@ const Category = ( ) => {
     </div>
   );
 }
-
 export default Category;
